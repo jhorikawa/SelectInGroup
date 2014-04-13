@@ -1,0 +1,16 @@
+﻿Option Explicit
+'Script written by <Junichiro Horikawa>
+'Script copyrighted by <Junichiro Horikawa>
+'Script version 2010年6月12日 13:10:53
+
+Call Main()
+Sub Main()
+	Dim arrObjects
+	
+	arrObjects = Rhino.GetObjects("Select Objects to Select", , False)
+	If Not IsNull(arrObjects) Then
+		Rhino.SelectObjects(arrObjects)
+	Else
+		Exit Sub
+	End If
+End Sub
